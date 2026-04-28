@@ -11,7 +11,7 @@ const htmlSource = await readFile(join(repoRoot, 'index.html'), 'utf8');
 const startMarker = '// ===== CODEFLOW_ANALYZER_START =====';
 const endMarker = '// ===== CODEFLOW_ANALYZER_END =====';
 const parserStart = htmlSource.indexOf(startMarker);
-const parserEnd = htmlSource.indexOf(endMarker, parserStart);
+const parserEnd = htmlSource.indexOf(endMarker, parserStart); 
 
 if (parserStart < 0 || parserEnd < 0) {
   throw new Error('Could not locate analyzer source in index.html');
